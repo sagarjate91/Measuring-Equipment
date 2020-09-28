@@ -1,26 +1,18 @@
-package com.measuring.equipment.model;
+package com.measuring.equipment.common;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import java.io.Serializable;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@Entity
-@Table(name = "CUSTOMER")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Customer {
+public class UserModel implements Serializable {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String firstName;
 	private String lastName;
@@ -30,6 +22,8 @@ public class Customer {
 	private String mobileNumber;
 	private String address;
 	private String pinCode;
-	private int status = 0;
+
+	
+
 
 }

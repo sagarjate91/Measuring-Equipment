@@ -30,6 +30,14 @@
           </div>
          </div>
          
+          <div class="form-group">
+          <label for="userName" class="col-md-4 control-label">UserName: </label>
+          <div class="col-md-8">
+           <sf:input path="userName" id="userName" class="form-control" placeholder="Enter the userName"/>
+           <sf:errors path="userName" cssClass="help-block" element="em"/>
+          </div>
+         </div>
+         
          <div class="form-group">
           <label for="email" class="col-md-4 control-label">Email: </label>
           <div class="col-md-8">

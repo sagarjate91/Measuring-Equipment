@@ -56,6 +56,9 @@ $(function() {
 					lastName: {
 						required: true,	
 					},
+					userName: {
+						required: true,	
+					},
 					email: {
 						required: true,
 						email: true
@@ -79,6 +82,9 @@ $(function() {
 					},
 					lastName: {
 						required: 'Please enter your lastname!'
+					},
+					userName: {
+						required: 'Please enter your username!'
 					},
 					email: {
 						required: 'Please enter your email!',
@@ -122,18 +128,16 @@ $(function() {
         $loginForm.validate({
                 rules: {
 
-                    email: {
+                    userName: {
                         required: true,
-                        email:true
                     },
                     password: {
                         required: true,
                     }
                 },
                 messages: {
-                    email: {
-                        required: 'Please enter your email id!',
-                        email:'Please enter valid email id!'
+                    userName: {
+                        required: 'Please enter your username!',
                     },
                     password: {
                         required: 'Please enter your password!'

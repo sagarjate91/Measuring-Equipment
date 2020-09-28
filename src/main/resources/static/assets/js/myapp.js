@@ -21,8 +21,8 @@ $(function() {
     	case 'Home':
     		$('#home').addClass('active');
     		break;
-    	case 'User':
-    		$('#user').addClass('active');
+    	case 'Customer':
+    		$('#customer').addClass('active');
     		break;
     	case 'Admin':
     		$('#admin').addClass('active');
@@ -119,15 +119,12 @@ $(function() {
 	
 //.....................................................................................	
 
-
-
     var $loginForm = $('#loginForm');
 
     if($loginForm.length) {
 
         $loginForm.validate({
                 rules: {
-
                     userName: {
                         required: true,
                     },

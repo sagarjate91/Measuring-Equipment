@@ -18,7 +18,7 @@
 					<c:if test="${sessionScope.role==null}">
 
 						<li id="home"><a href="${contextRoot}/measuring/equipment/home.htm">Home</a></li>
-						<li id="user"><a href="${contextRoot}/measuring/equipment/customer.htm">Customer</a></li>
+						<li id="customer"><a href="${contextRoot}/measuring/equipment/customer.htm">Customer</a></li>
 						<li id="admin"><a href="${contextRoot}/measuring/equipment/admin.htm">Admin</a></li>
 						<li id="signup"><a href="${contextRoot}/measuring/equipment/signup.htm">Signup</a></li>
 

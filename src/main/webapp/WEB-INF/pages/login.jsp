@@ -40,17 +40,7 @@
        </div>
       
      
-     <c:if test="${userClickUser==true}">
-     	
-       <div class="panel-footer">
-       	<div class="text-right">
-       	
-             New User - <a href="${contextRoot}/customer/registerPanel.htm">Register Here</a>
-     	      
-       	</div>
-        </div>
-       
-     </c:if>    
+     
      
       </div> 
     

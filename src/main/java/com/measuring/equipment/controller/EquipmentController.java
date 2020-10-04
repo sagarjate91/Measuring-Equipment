@@ -37,7 +37,7 @@ public class EquipmentController {
 		model.addAttribute(ConstantService.TITLE, "Customer");
 		model.addAttribute("userClickNewEquipment", true);
 		System.out.println(Units.units());
-		model.addAttribute("unitValues", Units.units());
+		model.addAttribute("equipmentUnits", Units.units());
 		model.addAttribute(ConstantService.ACTION, "measuring/equipment/customer/equipment-add");
 		model.addAttribute(ConstantService.COMMAND, new Equipment());
 		if (message != null) {

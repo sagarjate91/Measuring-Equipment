@@ -56,7 +56,7 @@
          <div class="form-group">
           <label for="equipmentUnit" class="col-md-4 control-label">EQUIPMENT UNIT: </label>
           <div class="col-md-8">
-              <sf:select path="equipmentUnit" items="${unitValues}" itemLabel="equipmentUnit" itemValue="Enter the equipment unit" class="form-control"/>
+              <sf:select path="equipmentUnit" items="${equipmentUnits}" itemLabel="name" itemValue="name" class="form-control"/>
            </div>
          </div>
          

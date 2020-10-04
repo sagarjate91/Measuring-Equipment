@@ -41,6 +41,7 @@ public class EquipmentController {
 		model.addAttribute(ConstantService.NAME, ConstantService.TITLE);
 		model.addAttribute(ConstantService.TITLE, "Customer");
 		model.addAttribute("userClickNewEquipment", true);
+		model.addAttribute("userClickUpdate", true);
 		model.addAttribute(ConstantService.ACTION, "measuring/equipment/customer/equipment-update");
 		model.addAttribute(ConstantService.COMMAND, erepo.findById(id));
 		return "page";
@@ -67,7 +68,6 @@ public class EquipmentController {
 	@RequestMapping("/equipment-update")
 	public String equipmentUpdate(@ModelAttribute("command") Equipment equipment, Model model,
 			RedirectAttributes redirectAttributes) {
-		model.addAttribute("userClickUpdate", true);
 		erepo.saveAndFlush(equipment);
 		redirectAttributes.addFlashAttribute(ConstantService.MESSAGE, "Equipment updated successfully....!!!");
 		return "redirect:/measuring/equipment/customer/new-equipment.htm";

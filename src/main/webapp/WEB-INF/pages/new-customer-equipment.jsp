@@ -102,9 +102,10 @@
           </div>
          </div>
          
-         <c:if test="${sessionScope.role =='ADMIN'}">
+         <c:if test="${userClickUpdate==true}">
+
           <div class="form-group">
-          <label for="equipmentCalibrationFrequency" class="col-md-4 control-label">CALIBRATION FREQUENCY: </label>
+          <label for="equipmentCalibrationFrequency" class="col-md-4 control-label" >CALIBRATION FREQUENCY: </label>
           <div class="col-md-8">
            <sf:input path="equipmentCalibrationFrequency" id="equipmentCalibrationFrequency" class="form-control" placeholder="Enter the equipment calibration frequency"></sf:input>
            <sf:errors path="equipmentCalibrationFrequency" cssClass="help-block" element="em"/> 
@@ -118,11 +119,9 @@
            <sf:errors path="equipmentType" cssClass="help-block" element="em"/> 
           </div>
          </div>
-         
-         
-         
+
           <div class="form-group">
-          <label for="equipmentCalibrationFrequency" class="col-md-4 control-label">Equipment Calibration Frequency: </label>
+          <label for="equipmentCalibrationFrequency" class="col-md-4 control-label"><span class="text-uppercase"/>Equipment Calibration Frequency: </label>
           <div class="col-md-8">
            <sf:input path="equipmentCalibrationFrequency" id="equipmentCalibrationFrequency" class="form-control" placeholder="Enter the equipment calibration frequency"></sf:input>
            <sf:errors path="equipmentCalibrationFrequency" cssClass="help-block" element="em"/> 
@@ -130,7 +129,7 @@
          </div>
          
           <div class="form-group">
-          <label for=equipmentCalibrationCertificateNo class="col-md-4 control-label">Equipment Calibration Certificate No: </label>
+          <label for=equipmentCalibrationCertificateNo class="col-md-4 control-label"><span class="text-uppercase"/>Equipment Calibration Certificate No: </label>
           <div class="col-md-8">
            <sf:input path="equipmentCalibrationCertificateNo" id="equipmentCalibrationCertificateNo" class="form-control" placeholder="Enter the Equipment Calibration Certificate No"></sf:input>
            <sf:errors path="equipmentCalibrationCertificateNo" cssClass="help-block" element="em"/> 
@@ -138,7 +137,7 @@
          </div>
          
          <div class="form-group">
-          <label for=equipmentCalibrationCertificateName class="col-md-4 control-label">Select Calibration Certificate: </label>
+          <label for=equipmentCalibrationCertificateName class="col-md-4 control-label"><span class="text-uppercase"/>Select Calibration Certificate: </label>
           <div class="col-md-8">
            <sf:input type="file" path="equipmentCalibrationCertificateName" id="equipmentCalibrationCertificateName" class="form-control" placeholder="Enter the equipment calibration certificate name"></sf:input>
            <sf:errors path="equipmentCalibrationCertificateName" cssClass="help-block" element="em"/> 
@@ -146,7 +145,7 @@
          </div>
          
           <div class="form-group">
-          <label for=equipmentCalibrationResults class="col-md-4 control-label">Equipment Calibration Results: </label>
+          <label for=equipmentCalibrationResults class="col-md-4 control-label"><span class="text-uppercase"/>Equipment Calibration Results: </label>
           <div class="col-md-8">
            <sf:input path="equipmentCalibrationResults" id="equipmentCalibrationResults" class="form-control" placeholder="Enter the equipment calibration certificate name"></sf:input>
            <sf:errors path="equipmentCalibrationResults" cssClass="help-block" element="em"/> 
@@ -154,7 +153,7 @@
          </div>
          
          <div class="form-group">
-          <label for=equipmentCalibrationUnit class="col-md-4 control-label">Equipment Calibration Unit: </label>
+          <label for=equipmentCalibrationUnit class="col-md-4 control-label"><span class="text-uppercase"/>Equipment Calibration Unit: </label>
           <div class="col-md-8">
            <sf:input path="equipmentCalibrationUnit" id="equipmentCalibrationUnit" class="form-control" placeholder="Enter the equipment calibration unit"></sf:input>
            <sf:errors path="equipmentCalibrationUnit" cssClass="help-block" element="em"/> 
@@ -162,7 +161,7 @@
          </div>
          
           <div class="form-group">
-          <label for=equipmentAcceptanceCriteria class="col-md-4 control-label">Equipment Acceptance Criteria: </label>
+          <label for=equipmentAcceptanceCriteria class="col-md-4 control-label"><span class="text-uppercase"/>Equipment Acceptance Criteria: </label>
           <div class="col-md-8">
            <sf:input path="equipmentAcceptanceCriteria" id="equipmentAcceptanceCriteria" class="form-control" placeholder="Enter the equipment acceptance criteria"></sf:input>
            <sf:errors path="equipmentAcceptanceCriteria" cssClass="help-block" element="em"/> 
@@ -170,7 +169,7 @@
          </div>
          
           <div class="form-group">
-          <label for=equipmentAcceptanceCriteriaUnit class="col-md-4 control-label">Equipment Acceptance Criteria Unit: </label>
+          <label for=equipmentAcceptanceCriteriaUnit class="col-md-4 control-label"><span class="text-uppercase"/>Equipment Acceptance Criteria Unit: </label>
           <div class="col-md-8">
            <sf:input path="equipmentAcceptanceCriteriaUnit" id="equipmentAcceptanceCriteriaUnit" class="form-control" placeholder="Enter the equipment acceptance criteria unit"></sf:input>
            <sf:errors path="equipmentAcceptanceCriteriaUnit" cssClass="help-block" element="em"/> 
@@ -178,7 +177,7 @@
          </div>
          
           <div class="form-group">
-          <label for=equipmentDecisionOurRemark class="col-md-4 control-label">Equipment DecisionOur Remark: </label>
+          <label for=equipmentDecisionOurRemark class="col-md-4 control-label"><span class="text-uppercase"/>Equipment DecisionOur Remark: </label>
           <div class="col-md-8">
            <sf:input path="equipmentDecisionOurRemark" id="equipmentDecisionOurRemark" class="form-control" placeholder="Enter the equipment decisionOur Remark"></sf:input>
            <sf:errors path="equipmentDecisionOurRemark" cssClass="help-block" element="em"/> 
@@ -186,7 +185,7 @@
          </div>
          
          <div class="form-group">
-          <label for=equipmentLocation class="col-md-4 control-label">Equipment Location: </label>
+          <label for=equipmentLocation class="col-md-4 control-label"><span class="text-uppercase"/>Equipment Location: </label>
           <div class="col-md-8">
            <sf:input path="equipmentLocation" id="equipmentLocation" class="form-control" placeholder="Enter the equipment decisionOur Remark"></sf:input>
            <sf:errors path="equipmentLocation" cssClass="help-block" element="em"/> 
@@ -194,7 +193,7 @@
          </div>
          
          <div class="form-group">
-          <label for=equipmentCalibrationExpiryDate class="col-md-4 control-label">Equipment Calibration Expiry Date: </label>
+          <label for=equipmentCalibrationExpiryDate class="col-md-4 control-label"><span class="text-uppercase"/>Equipment Calibration Expiry Date: </label>
           <div class="col-md-8">
            <sf:input path="equipmentCalibrationExpiryDate" id="equipmentCalibrationExpiryDate" class="form-control" placeholder="Enter the equipment calibration expiry date"></sf:input>
            <sf:errors path="equipmentCalibrationExpiryDate" cssClass="help-block" element="em"/> 
@@ -202,22 +201,37 @@
          </div>
          
          <div class="form-group">
-          <label for=equipmentType class="col-md-4 control-label">Equipment Type: </label>
+          <label for=equipmentType class="col-md-4 control-label"><span class="text-uppercase"/>Equipment Type: </label>
           <div class="col-md-8">
            <sf:input path="equipmentType" id="equipmentType" class="form-control" placeholder="Enter the equipment type"></sf:input>
            <sf:errors path="equipmentType" cssClass="help-block" element="em"/> 
           </div>
          </div>
          
-        	</c:if>
-         
+         </c:if>
+
+
          <div class="form-group">
           <div class="col-md-offset-4 col-md-8">
-           <input type="submit" value="Register" class="btn btn-primary"/>
+
+           <c:if test="${userClickUpdate==true}">
+
+            <input type="submit" value="Update" class="btn btn-primary"/>
+
+           </c:if>
+
+           <c:if test="${userClickUpdate==null}">
+
+             <input type="submit" value="Register" class="btn btn-primary"/>
+
+           </c:if>
+
           </div>
          </div>
          
-         
+
+
+
          
         </sf:form>	
        

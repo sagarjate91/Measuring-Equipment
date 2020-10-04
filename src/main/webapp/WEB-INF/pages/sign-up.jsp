@@ -91,7 +91,8 @@
       
        <div class="panel-footer">
        	<div class="text-right">
-     	      New User - <a href="${contextRoot}/customer/user.htm">Login Here</a>
+     	      New User - <a href="${contextRoot}/measuring/equipment/customer.htm">
+     	      Login Here</a>
        	</div>
         </div>
       

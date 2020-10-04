@@ -3,7 +3,7 @@ package com.measuring.equipment.services;
 public interface ConstantService {
 
 	final static String NAME="MEASURING EQUIPMENT SERVICES";
-	final static String USER_ROLE="USER";
+	final static String USER_ROLE="CUSTOMER";
 	final static String ADMIN_ROLE="ADMIN";
 
 	final static String USER="/customer";

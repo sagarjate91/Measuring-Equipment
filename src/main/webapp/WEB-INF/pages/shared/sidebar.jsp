@@ -4,20 +4,23 @@
 
     <c:if test="${sessionScope.role=='ADMIN'}">
 
-   	<c:forEach items="${categories}" var="category">
-   		<a href="${contextRoot}/admin/show/category/${category.name}/products" class="list-group-item" id="a_${category.name}">${category.name}</a>
-   	</c:forEach>
-
+   		<a href="${contextRoot}/admin/" class="list-group-item" id="active">Panel 1</a>
+   	    <a href="${contextRoot}/admin/" class="list-group-item" id="active">Panel 2</a>
+   	    <a href="${contextRoot}/admin/" class="list-group-item" id="active">Panel 3</a>
+      	<a href="${contextRoot}/admin/" class="list-group-item" id="active">Panel 4</a>
+     	<a href="${contextRoot}/measuring/equipment/logout" class="list-group-item" id="active">Logout</a>
+   
+   
    	</c:if>
 
 
       <!--  User Panel -->
-      <c:if test="${sessionScope.role =='USER'}">
+      <c:if test="${sessionScope.role=='CUSTOMER'}">
 
-          <c:forEach items="${categories}" var="category">
-   		        <a href="${contextRoot}/customer/show/category/${category.name}/products" class="list-group-item" id="a_${category.name}">${category.name}</a>
-   	       </c:forEach>
-
-       </c:if>
+				<a href="${contextRoot}/measuring/equipment/customer/new-equipment.htm" class="list-group-item" id="active">New Equipment Creation</a>
+				<a href="${contextRoot}/measuring/equipment/customer/update-equipment.htm" class="list-group-item" id="active">Update Equipment Creation</a>
+             	<a href="${contextRoot}/measuring/equipment/logout" class="list-group-item" id="active">Logout</a>
+   
+      </c:if>
 
   </div>

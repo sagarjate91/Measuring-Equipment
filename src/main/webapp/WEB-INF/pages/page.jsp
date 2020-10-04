@@ -29,6 +29,9 @@
 	
 </script>
 
+ <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
 <!-- Bootstrap Core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
@@ -90,9 +93,25 @@
 
             </c:if>
 
+           <c:if test="${sessionScope.role=='ADMIN'}">
 
+                        <c:if test="${userClickAdminHome==true}">
+            				<%@ include file="admin-home.jsp" %>
+            			</c:if>
+
+            </c:if>
            
+ 			<c:if test="${sessionScope.role=='CUSTOMER'}">
 
+                        <c:if test="${userClickNewEquipment==true}">
+            				<%@ include file="new-customer-equipment.jsp" %>
+            			</c:if>
+            			
+            			<c:if test="${userClickUpdateEquipment==true}">
+            				<%@ include file="update-customer-equipment.jsp" %>
+            			</c:if>
+
+            </c:if>
            
 
 		</div>

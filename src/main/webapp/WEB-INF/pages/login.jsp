@@ -15,10 +15,10 @@
       <sf:form action="${contextRoot}/${action}" modelAttribute="command" method="POST" class="form-horizontal" id="loginForm">
 
           <div class="form-group">
-              <label for="userName" class="col-md-4 control-label">UserName: </label>
+              <label for="email" class="col-md-4 control-label">UserName: </label>
               <div class="col-md-8">
-                  <sf:input path="userName" id="userName" class="form-control" placeholder="Enter the username"/>
-                  <sf:errors path="userName" cssClass="help-block" element="em"/>
+                  <sf:input path="email" id="email" class="form-control" placeholder="Enter the username" />
+                  <sf:errors path="email" cssClass="help-block" element="em"/>
               </div>
           </div>
 

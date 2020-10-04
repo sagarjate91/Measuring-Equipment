@@ -17,10 +17,19 @@
 					
 					<c:if test="${sessionScope.role==null}">
 
-						<li id="home"><a href="${contextRoot}/measuring/equipment/home.htm">Home</a></li>
-						<li id="customer"><a href="${contextRoot}/measuring/equipment/customer.htm">Customer</a></li>
-						<li id="admin"><a href="${contextRoot}/measuring/equipment/admin.htm">Admin</a></li>
-						<li id="signup"><a href="${contextRoot}/measuring/equipment/signup.htm">Signup</a></li>
+						<li id="home"><a href="${contextRoot}/measuring/equipment/home.htm">
+						 <span class="fas fa-home"></span> Home</a>
+						 </li>
+						 
+						<li id="customer"><a href="${contextRoot}/measuring/equipment/customer.htm">
+						<span class="fas fa-user"></span> Customer</a>
+						</li>
+						<li id="admin"><a href="${contextRoot}/measuring/equipment/admin.htm">
+						<span class="fas fa-lock"></span> Admin</a>
+						</li>
+						<li id="signup"><a href="${contextRoot}/measuring/equipment/signup.htm">
+						<span class="fa fa-user-plus"></span> Signup</a>
+						</li>
 
 					</c:if>
 		

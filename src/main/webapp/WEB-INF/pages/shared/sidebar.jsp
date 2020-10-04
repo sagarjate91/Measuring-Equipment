@@ -17,9 +17,9 @@
       <!--  User Panel -->
       <c:if test="${sessionScope.role=='CUSTOMER'}">
 
-				<a href="${contextRoot}/measuring/equipment/customer/new-equipment.htm" class="list-group-item" id="active">New Equipment Creation</a>
-				<a href="${contextRoot}/measuring/equipment/customer/update-equipment.htm" class="list-group-item" id="active">Update Equipment Creation</a>
-             	<a href="${contextRoot}/measuring/equipment/logout" class="list-group-item" id="active">Logout</a>
+		<a href="${contextRoot}/measuring/equipment/customer/new-equipment.htm" class="list-group-item" id="customer">New Equipment Creation</a>
+		<a href="${contextRoot}/measuring/equipment/customer/update-equipment.htm" class="list-group-item" >Update Equipment Creation</a>
+        <a href="${contextRoot}/measuring/equipment/logout" class="list-group-item" >Logout</a>
    
       </c:if>
 

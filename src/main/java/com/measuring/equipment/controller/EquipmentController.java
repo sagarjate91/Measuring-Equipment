@@ -1,8 +1,11 @@
 package com.measuring.equipment.controller;
 
+import com.measuring.equipment.utility.FileUploadUtility;
+import com.measuring.equipment.utility.Units;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +18,11 @@ import com.measuring.equipment.model.Equipment;
 import com.measuring.equipment.repository.EquipmentRepository;
 import com.measuring.equipment.services.ConstantService;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
 @Controller
 @RequestMapping("/measuring/equipment/customer")
 public class EquipmentController {
@@ -22,12 +30,14 @@ public class EquipmentController {
 	@Autowired
 	EquipmentRepository erepo;
 
+
 	@GetMapping("/new-equipment.htm")
 	public String equipment(Model model, @ModelAttribute("message") String message) {
 		model.addAttribute(ConstantService.NAME, ConstantService.TITLE);
 		model.addAttribute(ConstantService.TITLE, "Customer");
 		model.addAttribute("userClickNewEquipment", true);
-		model.addAttribute("method", "POST");
+		System.out.println(Units.units());
+		model.addAttribute("unitValues", Units.units());
 		model.addAttribute(ConstantService.ACTION, "measuring/equipment/customer/equipment-add");
 		model.addAttribute(ConstantService.COMMAND, new Equipment());
 		if (message != null) {
@@ -59,7 +69,6 @@ public class EquipmentController {
 	@PostMapping("/equipment-add")
 	public String equipmentAdd(@ModelAttribute("command") Equipment equipment, Model model,
 			RedirectAttributes redirectAttributes) {
-	
 		erepo.save(equipment);
 		redirectAttributes.addFlashAttribute(ConstantService.MESSAGE, "Equipment added successfully....!!!");
 		return "redirect:/measuring/equipment/customer/new-equipment.htm";
@@ -67,10 +76,12 @@ public class EquipmentController {
 	
 	@RequestMapping("/equipment-update")
 	public String equipmentUpdate(@ModelAttribute("command") Equipment equipment, Model model,
-			RedirectAttributes redirectAttributes) {
+								  RedirectAttributes redirectAttributes, HttpServletRequest request, BindingResult results) {
+		if(!equipment.getFile().getOriginalFilename().equals("")){
+			FileUploadUtility.uploadProductDetails(equipment.getFile(),equipment);
+		}
 		erepo.saveAndFlush(equipment);
 		redirectAttributes.addFlashAttribute(ConstantService.MESSAGE, "Equipment updated successfully....!!!");
 		return "redirect:/measuring/equipment/customer/new-equipment.htm";
 	}
-
 }

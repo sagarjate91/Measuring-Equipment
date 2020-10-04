@@ -56,9 +56,8 @@
          <div class="form-group">
           <label for="equipmentUnit" class="col-md-4 control-label">EQUIPMENT UNIT: </label>
           <div class="col-md-8">
-           <sf:input path="equipmentUnit" id="equipmentUnit" class="form-control" placeholder="Enter the equipment unit"/>
-           <sf:errors path="equipmentUnit" cssClass="help-block" element="em"/> 
-          </div>
+              <sf:select path="equipmentUnit" items="${unitValues}" itemLabel="equipmentUnit" itemValue="Enter the equipment unit" class="form-control"/>
+           </div>
          </div>
          
          <div class="form-group">
@@ -137,10 +136,10 @@
          </div>
          
          <div class="form-group">
-          <label for=equipmentCalibrationCertificateName class="col-md-4 control-label"><span class="text-uppercase"/>Select Calibration Certificate: </label>
+          <label for=file class="col-md-4 control-label"><span class="text-uppercase"/>Select Calibration Certificate: </label>
           <div class="col-md-8">
-           <sf:input type="file" path="equipmentCalibrationCertificateName" id="equipmentCalibrationCertificateName" class="form-control" placeholder="Enter the equipment calibration certificate name"></sf:input>
-           <sf:errors path="equipmentCalibrationCertificateName" cssClass="help-block" element="em"/> 
+           <sf:input type="file" path="file" id="file" class="form-control"></sf:input>
+           <sf:errors path="file" cssClass="help-block" element="em"/>
           </div>
          </div>
          
@@ -207,9 +206,16 @@
            <sf:errors path="equipmentType" cssClass="help-block" element="em"/> 
           </div>
          </div>
+
+          <div class="form-group">
+           <label for=notesValues class="col-md-4 control-label"><span class="text-uppercase"/>Note: </label>
+           <div class="col-md-8">
+           <sf:textarea path="notesValues" id="notesValues" class="form-control" placeholder="Enter the note"></sf:textarea>
+           <sf:errors path="notesValues" cssClass="help-block" element="em"/>
+           </div>
+          </div>
          
          </c:if>
-
 
          <div class="form-group">
           <div class="col-md-offset-4 col-md-8">
@@ -228,11 +234,7 @@
 
           </div>
          </div>
-         
 
-
-
-         
         </sf:form>	
        
        </div>

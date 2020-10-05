@@ -1,7 +1,7 @@
 package com.measuring.equipment.controller;
 
-import com.measuring.equipment.utility.FileUploadUtility;
-import com.measuring.equipment.utility.Units;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,18 +10,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.measuring.equipment.model.Equipment;
 import com.measuring.equipment.repository.EquipmentRepository;
 import com.measuring.equipment.services.ConstantService;
-
-import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Stream;
+import com.measuring.equipment.utility.FileUploadUtility;
+import com.measuring.equipment.utility.Units;
 
 @Controller
 @RequestMapping("/measuring/equipment/customer")

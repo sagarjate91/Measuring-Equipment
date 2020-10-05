@@ -56,8 +56,10 @@
          <div class="form-group">
           <label for="equipmentUnit" class="col-md-4 control-label">EQUIPMENT UNIT: </label>
           <div class="col-md-8">
-              <sf:select path="equipmentUnit" items="${equipmentUnits}" itemLabel="name" itemValue="name" class="form-control"/>
-           </div>
+       			<sf:select path="equipmentUnit" >
+    				<sf:options items="${equipmentUnits}" />
+				</sf:select>
+		 </div>
          </div>
          
          <div class="form-group">
@@ -114,9 +116,9 @@
           <div class="form-group">
           <label for="equipmentType" class="col-md-4 control-label">EQUIPMENT TYPE: </label>
           <div class="col-md-8">
-           <sf:input path="equipmentType" id="equipmentType" class="form-control" placeholder="Enter the equipment type"></sf:input>
+           <sf:input path="equipmentType" id="equipmentType" class="form-control" placeholder="Enter the equipment calibration frequency"></sf:input>
            <sf:errors path="equipmentType" cssClass="help-block" element="em"/> 
-          </div>
+           </div>
          </div>
 
           <div class="form-group">

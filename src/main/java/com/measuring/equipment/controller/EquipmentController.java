@@ -32,7 +32,6 @@ public class EquipmentController {
 		model.addAttribute(ConstantService.NAME, ConstantService.TITLE);
 		model.addAttribute(ConstantService.TITLE, "Customer");
 		model.addAttribute("userClickNewEquipment", true);
-		System.out.println(Units.units());
 		model.addAttribute("equipmentUnits", Units.units());
 		model.addAttribute(ConstantService.ACTION, "measuring/equipment/customer/equipment-add");
 		model.addAttribute(ConstantService.COMMAND, new Equipment());
@@ -47,6 +46,7 @@ public class EquipmentController {
 		model.addAttribute(ConstantService.NAME, ConstantService.TITLE);
 		model.addAttribute(ConstantService.TITLE, "Customer");
 		model.addAttribute("userClickNewEquipment", true);
+		model.addAttribute("equipmentUnits", Units.units());
 		model.addAttribute("userClickUpdate", true);
 		model.addAttribute(ConstantService.ACTION, "measuring/equipment/customer/equipment-update");
 		model.addAttribute(ConstantService.COMMAND, erepo.findById(id));

@@ -15,6 +15,8 @@ $(function() {
 		   }, 3000
 		);		
 	}
+	
+	
 
 	// solving the active menu problem
     	switch (menu) {

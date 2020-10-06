@@ -113,19 +113,12 @@
           </div>
          </div>
          
+         
           <div class="form-group">
-          <label for="equipmentType" class="col-md-4 control-label">EQUIPMENT TYPE: </label>
+          <label for="equipmentCalibrationLaboratory" class="col-md-4 control-label"><span class="text-uppercase"/>Equipment Calibration Laboratory: </label>
           <div class="col-md-8">
-           <sf:input path="equipmentType" id="equipmentType" class="form-control" placeholder="Enter the equipment calibration frequency"></sf:input>
-           <sf:errors path="equipmentType" cssClass="help-block" element="em"/> 
-           </div>
-         </div>
-
-          <div class="form-group">
-          <label for="equipmentCalibrationFrequency" class="col-md-4 control-label"><span class="text-uppercase"/>Equipment Calibration Frequency: </label>
-          <div class="col-md-8">
-           <sf:input path="equipmentCalibrationFrequency" id="equipmentCalibrationFrequency" class="form-control" placeholder="Enter the equipment calibration frequency"></sf:input>
-           <sf:errors path="equipmentCalibrationFrequency" cssClass="help-block" element="em"/> 
+           <sf:input path="equipmentCalibrationLaboratory" id="equipmentCalibrationLaboratory" class="form-control" placeholder="Enter the equipment calibration frequency"></sf:input>
+           <sf:errors path="equipmentCalibrationLaboratory" cssClass="help-block" element="em"/> 
           </div>
          </div>
          

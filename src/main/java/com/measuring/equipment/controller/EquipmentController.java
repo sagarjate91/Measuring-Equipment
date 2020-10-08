@@ -1,11 +1,8 @@
 package com.measuring.equipment.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.measuring.equipment.model.Equipment;
+import com.measuring.equipment.model.IssueEquipment;
 import com.measuring.equipment.repository.EquipmentRepository;
 import com.measuring.equipment.services.ConstantService;
 import com.measuring.equipment.utility.FileUploadUtility;
@@ -25,7 +23,6 @@ public class EquipmentController {
 
 	@Autowired
 	EquipmentRepository erepo;
-
 
 	@GetMapping("/new-equipment.htm")
 	public String equipment(Model model, @ModelAttribute("message") String message) {
@@ -72,12 +69,22 @@ public class EquipmentController {
 	
 	@RequestMapping("/equipment-update")
 	public String equipmentUpdate(@ModelAttribute("command") Equipment equipment, Model model,
-								  RedirectAttributes redirectAttributes, HttpServletRequest request, BindingResult results) {
+								  RedirectAttributes redirectAttributes) {
 		if(!equipment.getFile().getOriginalFilename().equals("")){
 			FileUploadUtility.uploadProductDetails(equipment.getFile(),equipment);
 		}
 		erepo.saveAndFlush(equipment);
 		redirectAttributes.addFlashAttribute(ConstantService.MESSAGE, "Equipment updated successfully....!!!");
 		return "redirect:/measuring/equipment/customer/new-equipment.htm";
+	}
+	
+
+	@GetMapping("/issue-equipment.htm")
+	public String issueEquipmentUpdate(Model model) {
+		model.addAttribute(ConstantService.NAME, ConstantService.TITLE);
+		model.addAttribute(ConstantService.TITLE, "Customer");
+		model.addAttribute("userClickIssueEquipment", true);
+		model.addAttribute(ConstantService.COMMAND, new IssueEquipment());
+		return "page";
 	}
 }

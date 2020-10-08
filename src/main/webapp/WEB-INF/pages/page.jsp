@@ -110,6 +110,10 @@
             			<c:if test="${userClickUpdateEquipment==true}">
             				<%@ include file="update-customer-equipment.jsp" %>
             			</c:if>
+            			
+            			<c:if test="${userClickIssueEquipment==true}">
+            				<%@ include file="issue-equipment.jsp" %>
+            			</c:if>
 
             </c:if>
            

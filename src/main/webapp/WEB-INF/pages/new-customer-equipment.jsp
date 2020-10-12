@@ -1,4 +1,5 @@
- <%@taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>			
+ <%@taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>	
+ 		
     
    <div class="container">
    
@@ -31,11 +32,13 @@
           <div class="form-group">
           <label for="equipmentId" class="col-md-4 control-label">EQUIPMENT ID _SR.NO: </label>
           <div class="col-md-8">
-           <sf:input  path="equipmentId" id="equipmentId" class="form-control" placeholder="Enter the equipment Id" />
-             <sf:input  type="hidden" path="id" id="id" class="form-control" readonly="true" />
+           <sf:input  path="equipmentId" id="equipmentId" placeholder="Equipment Id" />
+           <sf:input  path="equipmen_sn" id="equipmen_sn" placeholder="SN" />
+           <sf:hidden path="id" id="id" class="form-control" readonly="true" />
            <sf:errors path="equipmentId" cssClass="help-block" element="em"/>
           </div>
          </div>
+         
          
          <div class="form-group">
           <label for="equipmentDescription" class="col-md-4 control-label">EQUIPMENT DESCRIPTION: </label>
@@ -85,8 +88,7 @@
            <sf:errors path="equipmentCreatedDate" cssClass="help-block" element="em"/>
           </div>
          </div>
-         
-          
+      
          <div class="form-group">
           <label for="equipmentCreatedTime" class="col-md-4 control-label">CREATED TIME: </label>
           <div class="col-md-8">

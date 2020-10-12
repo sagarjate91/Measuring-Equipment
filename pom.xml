@@ -23,11 +23,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 	
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
@@ -39,13 +39,17 @@
 			<artifactId>jstl</artifactId>
 		</dependency>
 
-
-
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		
+		<!-- <dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>6.9.0</version>
+		</dependency> -->
 
 		<dependency>
 			<groupId>mysql</groupId>
@@ -59,10 +63,8 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-
 		
-
-		<dependency>
+    	<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -74,8 +76,6 @@
 			</exclusions>
 		</dependency>
 	</dependencies>
-
-
 	<build>
 		<plugins>
 			<plugin>
@@ -85,6 +85,5 @@
 		</plugins>
 		
 	</build>
-
 	<packaging>war</packaging>
 </project>

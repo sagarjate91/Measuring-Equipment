@@ -31,6 +31,7 @@
                             <th>Equipment CreatedTime</th>
                             <th>Equipment ReasonForUpdate</th>
                             <th>Edit</th>
+                            <th>Issue</th>
                           </tr>
 
                             </thead>
@@ -38,6 +39,7 @@
                             <tbody>
 
                             <tr>
+                               <td></td>
                                <td></td>
                                <td></td>
                                <td></td>

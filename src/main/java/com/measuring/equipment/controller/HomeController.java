@@ -24,23 +24,23 @@ public class HomeController {
 
 	@Autowired
 	CustomerRepository repo;
-
+	
 	@GetMapping({ "/", "/home.htm" })
-	private String index(Model model) {
+	private String index(Model model){
 		model.addAttribute(ConstantService.NAME, ConstantService.TITLE);
-		model.addAttribute(ConstantService.TITLE, "Home");
+		model.addAttribute(ConstantService.TITLE, "Home Panel");
 		return "page";
 	}
 
 	@GetMapping({ "/login", "/customer.htm" ,"/login.htm"})
 	public String loginUser(Model model, @ModelAttribute("message") String message) {
 		model.addAttribute(ConstantService.NAME, ConstantService.TITLE);
-		model.addAttribute(ConstantService.TITLE, "Customer");
+		model.addAttribute(ConstantService.TITLE, "Customer Panel");
 		model.addAttribute("userClickUser", true);
 		model.addAttribute(ConstantService.ACTION, "measuring/equipment/login-validate");
 		model.addAttribute(ConstantService.COMMAND, new UserModel());
 		if (message != null) {
-			model.addAttribute(ConstantService.MESSAGE, message + "");
+			model.addAttribute(ConstantService.MESSAGE, message +"");
 		}
 		return "page";
 	}
@@ -78,7 +78,7 @@ public class HomeController {
 	@GetMapping({ "/signup.htm" })
 	public String signup(Model model, @ModelAttribute("message") String message) {
 		model.addAttribute(ConstantService.NAME, ConstantService.TITLE);
-		model.addAttribute(ConstantService.TITLE, "Signup");
+		model.addAttribute(ConstantService.TITLE, "Signup Panel");
 		model.addAttribute("userClickRegister", true);
 		model.addAttribute(ConstantService.ACTION, "measuring/equipment/signup-add");
 		model.addAttribute(ConstantService.COMMAND, new UserModel());
@@ -91,7 +91,7 @@ public class HomeController {
 	@GetMapping({ "/admin.htm" })
 	public String adminUser(@ModelAttribute("message") String message, Model model) {
 		model.addAttribute(ConstantService.NAME, ConstantService.TITLE);
-		model.addAttribute(ConstantService.TITLE, "Admin");
+		model.addAttribute(ConstantService.TITLE, "Admin Panel");
 		model.addAttribute("userClickAdmin", true);
 		model.addAttribute(ConstantService.ACTION, "measuring/equipment/admin-validate");
 		model.addAttribute(ConstantService.COMMAND, new UserModel());
@@ -120,10 +120,8 @@ public class HomeController {
 		if (repo.findByEmail(customer.getEmail()) != null) {
 			redirectAttributes.addFlashAttribute("message", "User Already added,Please try new one..!");
 		} else {
-			
 			repo.save(customer);
 			redirectAttributes.addFlashAttribute(ConstantService.MESSAGE, "User added successfully....!!!");
-
 		}
 		return "redirect:/measuring/equipment/signup.htm";
 	}

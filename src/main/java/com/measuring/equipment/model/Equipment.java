@@ -26,6 +26,8 @@ public class Equipment {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String equipmentId;
+	@Transient
+	private String equipmen_sn;
 	private String equipmentDescription;
 	private String equipmentLeastCount;
 	private String equipmentUnit;

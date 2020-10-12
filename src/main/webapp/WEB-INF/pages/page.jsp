@@ -21,7 +21,9 @@
 
 
 <title>Measuring Equipment Services - ${title}</title>
-
+ 
+  
+  
 <script>
 	window.menu = '${title}';
 	window.contextRoot = '${contextRoot}'
@@ -38,11 +40,13 @@
 <!-- Bootstrap Readable Theme -->
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
-
 <!-- Bootstrap DataTables -->
 <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
+
+  
 <!-- Custom CSS -->
 <link href="${css}/myapp.css" rel="stylesheet">
 
@@ -111,8 +115,12 @@
             				<%@ include file="update-customer-equipment.jsp" %>
             			</c:if>
             			
-            			<c:if test="${userClickIssueEquipment==true}">
+            			<c:if test="${userClickIssueEquipment==true || userClickIssueEquipment==true}">
             				<%@ include file="issue-equipment.jsp" %>
+            			</c:if>
+            			
+            			<c:if test="${userClickAcceptantEquipment==true}">
+            				
             			</c:if>
 
             </c:if>
@@ -143,7 +151,10 @@
 		
 		<!-- Self coded javascript -->
 		<script src="${js}/myapp.js"></script>
-
+		
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+		
+		 
 	</div>
 
 </body>

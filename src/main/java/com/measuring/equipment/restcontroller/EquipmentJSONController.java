@@ -22,5 +22,5 @@ public class EquipmentJSONController {
 	public List<Equipment> getAllEquipment(){
 		return erepo.findAll();
 	}
-    
+	
 }

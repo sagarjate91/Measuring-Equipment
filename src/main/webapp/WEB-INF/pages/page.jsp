@@ -120,7 +120,7 @@
             			</c:if>
             			
             			<c:if test="${userClickAcceptantEquipment==true}">
-            				
+            				<%@ include file="issue-equipment.jsp" %>
             			</c:if>
 
             </c:if>

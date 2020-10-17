@@ -1,70 +1,71 @@
 <div class="container">
 
-    <div class="col-md-3">
+	<div class="col-md-3">
 
-        <%@include file="./shared/sidebar.jsp"%>
+		<%@include file="./shared/sidebar.jsp"%>
 
-    </div>
+	</div>
 
-    <div class="col-md-9">
-
-
-        <div class="row">
-
-            <div  class="row">
-
-                <div class="col-xs-12">
-
-                     <table  class="table table-striped table-bordered" id="equipmentlist">
-
-                    <thead>
-
-                          <tr>
-
-                            <th>Equipment Id</th>
-                            <th>Equipment Description</th>
-                            <th>Equipment Least Count</th>
-                            <th>Equipment Unit</th>
-                            <th>Equipment Manfacturer Name</th>
-                            <th>Equipment CreatedBy</th>
-                            <th>Equipment CreatedDate</th>
-                            <th>Equipment CreatedTime</th>
-                            <th>Equipment ReasonForUpdate</th>
-                            <th>Edit</th>
-                            <th>Issue</th>
-                          </tr>
-
-                            </thead>
-
-                            <tbody>
-
-                            <tr>
-                               <td></td>
-                               <td></td>
-                               <td></td>
-                               <td></td>
-                               <td></td>
-                               <td></td>
-                               <td></td>
-                               <td></td>
-                               <td></td>
-                               <td></td>
-                               <td></td>
-                            </tr>
-
-                            </tbody>
-
-                </table>
+	<div class="col-md-9">
 
 
+		<div class="row">
 
-                </div>
+			<div class="row">
 
-            </div>
+				<div class="col-xs-12">
 
-        </div>
+					<table class="table table-striped table-bordered"
+						id="equipmentlist">
 
-    </div>
+						<thead>
+
+							<tr>
+								<th>Edit</th>
+								<th>Issue</th>
+								<th>Equipment Id</th>
+								<th>Description</th>
+								<th>Least Count</th>
+								<th>Unit</th>
+								<th>ManfacturerName</th>
+								<th>CreatedBy</th>
+								<th>CreatedDate</th>
+								<th>CreatedTime</th>
+								<th>ReasonForUpdate</th>
+							</tr>
+
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+
+						</tbody>
+
+					</table>
+
+
+					<a href="/measuring/equipment/customer/report">Download Report</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
 
 
 

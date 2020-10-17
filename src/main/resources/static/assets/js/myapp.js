@@ -209,6 +209,35 @@ $(function() {
 						dataSrc : ''
 					},
 					columns : [
+						
+						{
+							data : 'id',
+							bSortable : false,
+							mRender : function(data, type, row) {
+
+								var str = '';
+								str += '<a href="'
+										+ window.contextRoot
+										+ '/measuring/equipment/customer/'
+										+ row.id
+										+ '/update" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a>';
+								return str;
+							}
+						},
+						{
+							data : 'id',
+							bSortable : false,
+							mRender : function(data, type, row) {
+
+								var str = '';
+								str += '<a href="'
+										+ window.contextRoot
+										+ '/measuring/equipment/customer/'
+										+ row.id
+										+ '/issue/update" class="btn btn-info"><span class="glyphicon glyphicon-envelope"></span></a>';
+								return str;
+							}
+						   },
 
 							{
 								data : 'equipmentId',
@@ -236,37 +265,8 @@ $(function() {
 							},
 							{
 								data : 'equipmentReasonForUpdate',
-							},
-							{
-								data : 'id',
-								bSortable : false,
-								mRender : function(data, type, row) {
-
-									var str = '';
-									str += '<a href="'
-											+ window.contextRoot
-											+ '/measuring/equipment/customer/'
-											+ row.id
-											+ '/update" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a> &#160;';
-									return str;
-								}
-							},
-							{
-								data : 'id',
-								bSortable : false,
-								mRender : function(data, type, row) {
-
-									var str = '';
-									str += '<a href="'
-											+ window.contextRoot
-											+ '/measuring/equipment/customer/'
-											+ row.id
-											+ '/issue/update" class="btn btn-info"><span class="glyphicon glyphicon-envelope"></span></a> &#160;';
-									return str;
-								}
 							}
-
-					]
+						]
 
 				});
 	}

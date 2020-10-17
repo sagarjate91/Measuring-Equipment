@@ -37,9 +37,9 @@
          </div>
          
          <div class="form-group">
-          <label for="equipmentDescription" class="col-md-4 control-label">EQUIPMENT DESCRIPTION: </label>
+          <label for="equipmentDescription" class="col-md-4 control-label">DESCRIPTION:</label>
           <div class="col-md-8">
-           <sf:input path="equipmentDescription" id="equipmentDescription" class="form-control" placeholder="Enter the equipment description"/>
+           <sf:input path="equipmentDescription" id="equipmentDescription" class="form-control" placeholder="Enter the description"/>
            <sf:errors path="equipmentDescription" cssClass="help-block" element="em"/>
           </div>
          </div>
@@ -47,7 +47,7 @@
          <div class="form-group">
           <label for=fromLocation class="col-md-4 control-label"><span class="text-uppercase">From Location:</span> </label>
           <div class="col-md-8">
-           <sf:input path="fromLocation" id="fromLocation" class="form-control" placeholder="Enter the equipment from Location"></sf:input>
+           <sf:input path="fromLocation" id="fromLocation" class="form-control" placeholder="Enter the from Location"></sf:input>
            <sf:errors path="fromLocation" cssClass="help-block" element="em"/> 
           </div>
          </div>
@@ -55,7 +55,7 @@
         <div class="form-group">
           <label for=toIssueLocation class="col-md-4 control-label"><span class="text-uppercase">To Issue Location: </span></label>
           <div class="col-md-8">
-           <sf:input path="toIssueLocation" id="toIssueLocation" class="form-control" placeholder="Enter the equipment to Location"></sf:input>
+           <sf:input path="toIssueLocation" id="toIssueLocation" class="form-control" placeholder="Enter the to Location"></sf:input>
            <sf:errors path="toIssueLocation" cssClass="help-block" element="em"/> 
           </div>
          </div>
@@ -87,15 +87,15 @@
          <div class="form-group">
           <label for="equipmentCreatedTime" class="col-md-4 control-label">CREATED TIME: </label>
           <div class="col-md-8">
-           <sf:input path="equipmentCreatedTime" id="equipmentCreatedTime" class="form-control" placeholder="Enter the equipment created time"></sf:input>
+           <sf:input path="equipmentCreatedTime" id="equipmentCreatedTime" class="form-control" placeholder="Enter the created time"></sf:input>
            <sf:errors path="equipmentCreatedTime" cssClass="help-block" element="em"/> 
           </div>
          </div>
           
           <div class="form-group">
-          <label for=equipmentDecisionOurRemark class="col-md-4 control-label"><span class="text-uppercase">Equipment Decision/Remark:</span> </label>
+          <label for=equipmentDecisionOurRemark class="col-md-4 control-label"><span class="text-uppercase">Decision/Remark:</span> </label>
           <div class="col-md-8">
-           <sf:input path="equipmentDecisionOurRemark" id="equipmentDecisionOurRemark" class="form-control" placeholder="Enter the equipment decisionOur Remark"></sf:input>
+           <sf:input path="equipmentDecisionOurRemark" id="equipmentDecisionOurRemark" class="form-control" placeholder="Enter the decisionOur Remark"></sf:input>
            <sf:errors path="equipmentDecisionOurRemark" cssClass="help-block" element="em"/> 
           </div>
          </div>
@@ -103,7 +103,7 @@
          <div class="form-group">
           <label for=equipmentCalibrationExpiryDate class="col-md-4 control-label"><span class="text-uppercase">Calibration Expiry Date: </span></label>
           <div class="col-md-8">
-           <sf:input path="equipmentCalibrationExpiryDate" id="equipmentCalibrationExpiryDate" class="form-control" placeholder="Enter the equipment calibration expiry date"></sf:input>
+           <sf:input path="equipmentCalibrationExpiryDate" id="equipmentCalibrationExpiryDate" class="form-control" placeholder="Enter the calibration expiry date"></sf:input>
            <sf:errors path="equipmentCalibrationExpiryDate" cssClass="help-block" element="em"/> 
           </div>
          </div>
@@ -129,9 +129,7 @@
        </div>
       
       
-       <div class="panel-footer">
-       
-        </div>
+      
       
       </div> 
              

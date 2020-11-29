@@ -92,7 +92,7 @@
          <div class="form-group">
           <label for="equipmentCreatedTime" class="col-md-4 control-label">CREATED TIME: </label>
           <div class="col-md-8">
-           <sf:input path="equipmentCreatedTime" id="equipmentCreatedTime" class="form-control" placeholder="Enter the created time"></sf:input>
+           <sf:input path="equipmentCreatedTime" id="equipmentCreatedTime1" class="form-control" placeholder="Enter the created time"></sf:input>
            <sf:errors path="equipmentCreatedTime" cssClass="help-block" element="em"/> 
           </div>
          </div>
@@ -105,8 +105,6 @@
           </div>
          </div>
          
-         <c:if test="${userClickUpdate==true}">
-
           <div class="form-group">
           <label for="equipmentCalibrationFrequency" class="col-md-4 control-label" >CALIBRATION FREQUENCY: </label>
           <div class="col-md-8">
@@ -115,7 +113,16 @@
           </div>
          </div>
          
+           <div class="form-group">
+          <label for=equipmentType class="col-md-4 control-label"><span class="text-uppercase">Equipment Type</span> </label>
+          <div class="col-md-8">
+           <sf:input path="equipmentType" id="equipmentType" class="form-control" placeholder="Enter the equipment type"></sf:input>
+           <sf:errors path="equipmentType" cssClass="help-block" element="em"/> 
+          </div>
+         </div>
          
+         <c:if test="${userClickUpdate==true}">
+
           <div class="form-group">
           <label for="equipmentCalibrationLaboratory" class="col-md-4 control-label"><span class="text-uppercase">Calibration Laboratory:</span></label>
           <div class="col-md-8">
@@ -189,6 +196,15 @@
          </div>
          
          <div class="form-group">
+          <label for="equipmentCalibrationDate" class="col-md-4 control-label">CALIBRATION DATE: </label>
+          <div class="col-md-8">
+           <sf:input path="equipmentCalibrationDate" id="equipmentCalibrationDate" class="form-control" placeholder="xxxxxxxx"/>
+           <sf:errors path="equipmentCalibrationDate" cssClass="help-block" element="em"/>
+          </div>
+         </div>
+      
+         
+         <div class="form-group">
           <label for=equipmentCalibrationExpiryDate class="col-md-4 control-label"><span class="text-uppercase">Calibration Expiry Date:</span></label>
           <div class="col-md-8">
            <sf:input path="equipmentCalibrationExpiryDate" id="equipmentCalibrationExpiryDate" class="form-control" placeholder="Enter the calibration expiry date"></sf:input>
@@ -196,13 +212,7 @@
           </div>
          </div>
          
-         <div class="form-group">
-          <label for=equipmentType class="col-md-4 control-label"><span class="text-uppercase">Equipment Type</span> </label>
-          <div class="col-md-8">
-           <sf:input path="equipmentType" id="equipmentType" class="form-control" placeholder="Enter the equipment type"></sf:input>
-           <sf:errors path="equipmentType" cssClass="help-block" element="em"/> 
-          </div>
-         </div>
+       
 
           <div class="form-group">
            <label for=notesValues class="col-md-4 control-label"><span class="text-uppercase">Note:</span></label>

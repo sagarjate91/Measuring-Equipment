@@ -13,28 +13,36 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
-@Table(name = "ISSUE_EQUIPMENT")
+@Table(name = "ACCEPTANT")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class IssueEquipment {
+public class Acceptant {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	@NotBlank
 	private String equipmentId;
+	@NotBlank
 	private String equipmentDescription;
-	private String fromLocation;
-	private String toIssueLocation;
-	private String issueDate;
-	private String equipmentCreatedBy;
-	private String equipmentCreatedDate;
-	private String equipmentCreatedTime;
-	private String equipmentDecisionOurRemark;
-	private String equipmentCalibrationExpiryDate;
-	private String notesValues;
-	
+	@NotBlank
+	private String equipmentRange;
+	@NotBlank
+	private String applicationRange;
+	@NotBlank
+	private String equipmentLeastCount;
+	@NotBlank
+	private String equipmentAccurency;
+	@NotBlank
+	private String parameterLowestTolerance;
+	@NotBlank
+	private String acceptantCriteria;
+	@NotBlank
+	private String equipmentUnit;
+	@NotBlank
+	private String referenceStandard;
+	@NotBlank
+	private String clauseNo;
 
 }

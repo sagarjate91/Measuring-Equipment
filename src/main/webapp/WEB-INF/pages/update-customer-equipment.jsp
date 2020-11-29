@@ -22,16 +22,16 @@
 
 							<tr>
 								<th>Edit</th>
-								<th>Issue</th>
-								<th>Equipment Id</th>
+								<th>EquipmentId</th>
 								<th>Description</th>
-								<th>Least Count</th>
+								<th>LeastCount</th>
 								<th>Unit</th>
 								<th>ManfacturerName</th>
 								<th>CreatedBy</th>
 								<th>CreatedDate</th>
 								<th>CreatedTime</th>
 								<th>ReasonForUpdate</th>
+								
 							</tr>
 
 						</thead>
@@ -49,7 +49,7 @@
 								<td></td>
 								<td></td>
 								<td></td>
-								<td></td>
+								
 							</tr>
 
 						</tbody>

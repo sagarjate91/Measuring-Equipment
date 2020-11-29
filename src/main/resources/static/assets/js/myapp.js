@@ -1,29 +1,3 @@
-$(document).ready(
-		function() {
-			var date_input = $('input[name="equipmentCreatedDate"]');
-			var container = $('.bootstrap-iso form').length > 0 ? $(
-					'.bootstrap-iso form').parent() : "body";
-			date_input.datepicker({
-				format : 'mm/dd/yyyy',
-				container : container,
-				todayHighlight : true,
-				autoclose : true,
-			})
-})
-
-$(document).ready(
-		function() {
-			var date_input = $('input[name="equipmentCreatedTime"]');
-			var container = $('.bootstrap-iso form').length > 0 ? $(
-					'.bootstrap-iso form').parent() : "body";
-			date_input.datepicker({
-				format: 'mm/dd/yyyy H:mm',
-				container : container,
-				todayHighlight : true,
-				autoclose : true,
-			})
-})
-		
 
 $(function() {
 
@@ -223,20 +197,6 @@ $(function() {
 										+ '/update" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a>';
 								return str;
 							}
-						},
-						{
-							data : 'id',
-							bSortable : false,
-							mRender : function(data, type, row) {
-
-								var str = '';
-								str += '<a href="'
-										+ window.contextRoot
-										+ '/measuring/equipment/customer/'
-										+ row.id
-										+ '/issue/update" class="btn btn-info"><span class="glyphicon glyphicon-envelope"></span></a>';
-								return str;
-							}
 						   },
 
 							{
@@ -270,8 +230,160 @@ $(function() {
 
 				});
 	}
+	
+	
+	/* .......................................... */
+
+	var $acceptantlist = $('#acceptantlist');
+
+	if ($acceptantlist.length) {
+
+		var jsonUrl = jsonUrl = window.contextRoot + '/customer/all/acceptant';
+
+		$acceptantlist
+				.DataTable({
+					lengthMenu : [ [ 3, 5, 10, -1 ],
+							[ '3 Records', '5 Records', '10 Records', 'ALL' ] ],
+					pageLength : 5,
+					ajax : {
+						url : jsonUrl,
+						dataSrc : ''
+					},
+					columns : [
+						
+						   {
+								data : 'id',
+								bSortable : false,
+								mRender : function(data, type, row) {
+
+									var str = '';
+									str += '<a href="'
+											+ window.contextRoot
+											+ '/measuring/equipment/customer/'
+											+ row.id
+											+ '/acceptant-register" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a>';
+									return str;
+								}
+							},
+
+							{
+								data : 'equipmentId',
+							},
+							{
+								data : 'equipmentDescription',
+							},
+							{
+								data : 'equipmentRange',
+							},
+							{
+								data : 'applicationRange',
+							},
+							{
+								data : 'equipmentLeastCount',
+							},
+							{
+								data : 'equipmentAccurency',
+							},
+							{
+								data : 'parameterLowestTolerance',
+							},
+							{
+								data : 'acceptantCriteria',
+							},
+							{
+								data : 'equipmentUnit',
+							},
+							{
+								data : 'referenceStandard',
+							},
+							{
+								data : 'clauseNo',
+							}
+						]
+
+				});
+	}
+
 
 	/* .......................................... */
+	
+	var $laboratorylist = $('#laboratorylist');
+
+	if ($laboratorylist.length) {
+
+		var jsonUrl = jsonUrl = window.contextRoot + '/customer/all/laboratory';
+
+		$laboratorylist
+				.DataTable({
+					lengthMenu : [ [ 3, 5, 10, -1 ],
+							[ '3 Records', '5 Records', '10 Records', 'ALL' ] ],
+					pageLength : 5,
+					ajax : {
+						url : jsonUrl,
+						dataSrc : ''
+					},
+					columns : [
+						
+						   {
+								data : 'id',
+								bSortable : false,
+								mRender : function(data, type, row) {
+
+									var str = '';
+									str += '<a href="'
+											+ window.contextRoot
+											+ '/measuring/equipment/customer/'
+											+ row.id
+											+ '/laboratory" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a>';
+									return str;
+								}
+							},
+
+							{
+								data : 'laboratoryName',
+							},
+							{
+								data : 'address',
+							},
+							{
+								data : 'contactNumber',
+							},
+							{
+								data : 'emailId',
+							},
+							{
+								data : 'calibrationScope',
+							},
+							{
+								data : 'scopeCopy',
+							},
+							{
+								data : 'certificationDetails',
+							},
+							{
+								data : 'certificationNo',
+							},
+							{
+								data : 'certificationCopy',
+							},
+							{
+								data : 'certificattionDate',
+							},
+							{
+								data : 'expiryDate',
+							},
+							{
+								data : 'note',
+							},
+							{
+								data : 'reminderOneMonthBeforeExpiryDate',
+							}
+						]
+
+				});
+	}
+
+
 
 	/*------*/
 	var $tableUser = $('#userListTable');

@@ -25,10 +25,11 @@ public class HomeController {
 	@Autowired
 	CustomerRepository repo;
 	
-	@GetMapping({ "/", "/home.htm" })
+	@GetMapping({ "/", "/home.htm" ,""})
 	private String index(Model model){
 		model.addAttribute(ConstantService.NAME, ConstantService.TITLE);
 		model.addAttribute(ConstantService.TITLE, "Home Panel");
+		model.addAttribute("userClickHome", true);
 		return "page";
 	}
 

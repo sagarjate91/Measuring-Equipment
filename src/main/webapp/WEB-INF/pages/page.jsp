@@ -21,17 +21,16 @@
 
 
 <title>Measuring Equipment Services - ${title}</title>
- 
-  
-  
+
+
+
 <script>
 	window.menu = '${title}';
 	window.contextRoot = '${contextRoot}'
-	window.userID='${sessionScope.role}'
-	
+	window.userID = '${sessionScope.role}'
 </script>
 
- <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 
 <!-- Bootstrap Core CSS -->
@@ -43,10 +42,10 @@
 <!-- Bootstrap DataTables -->
 <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+ -->
 
 
-  
 <!-- Custom CSS -->
 <link href="${css}/myapp.css" rel="stylesheet">
 
@@ -60,22 +59,24 @@
 </head>
 
 <body>
-	
+
 	<div class="se-pre-con"></div>
 	<div class="wrapper">
 
 		<!-- Navigation -->
 		<%@include file="./shared/navbar.jsp"%>
 
-		 <!-- Message -->
+		<!-- Message -->
 
-           <c:if test="${not empty message}">
-        		<div class="row">
-        			<div class="col-xs-12 col-md-offset-2 col-md-8">
-        				<div class="alert alert-info fade in"><h6 align="center">${message}</h6></div>
-        			</div>
-        		</div>
-        	</c:if>
+		<c:if test="${not empty message}">
+			<div class="row">
+				<div class="col-xs-12 col-md-offset-2 col-md-8">
+					<div class="alert alert-info fade in">
+						<h6 align="center">${message}</h6>
+					</div>
+				</div>
+			</div>
+		</c:if>
 
 		<!-- Page Content -->
 
@@ -83,48 +84,62 @@
 
 			<c:if test="${sessionScope.role==null}">
 
-			            <c:if test="${userClickHome==true}">
-				            <%@ include file="index.jsp" %>
-			            </c:if>
+				<c:if test="${userClickHome==true}">
+					<%@ include file="index.jsp"%>
+				</c:if>
 
-			            <c:if test="${userClickUser==true or userClickAdmin==true}">
-				            <%@ include file="login.jsp" %>
-			            </c:if>
+				<c:if test="${userClickUser==true or userClickAdmin==true}">
+					<%@ include file="login.jsp"%>
+				</c:if>
 
-			            <c:if test="${userClickRegister==true}">
-				            <%@ include file="sign-up.jsp" %>
-			            </c:if>
+				<c:if test="${userClickRegister==true}">
+					<%@ include file="sign-up.jsp"%>
+				</c:if>
 
-            </c:if>
+			</c:if>
 
-           <c:if test="${sessionScope.role=='ADMIN'}">
+			<c:if test="${sessionScope.role=='ADMIN'}">
 
-                        <c:if test="${userClickAdminHome==true}">
-            				<%@ include file="admin-home.jsp" %>
-            			</c:if>
+				<c:if test="${userClickAdminHome==true}">
+					<%@ include file="admin-home.jsp"%>
+				</c:if>
 
-            </c:if>
-           
- 			<c:if test="${sessionScope.role=='CUSTOMER'}">
+			</c:if>
 
-                        <c:if test="${userClickNewEquipment==true}">
-            				<%@ include file="new-customer-equipment.jsp" %>
-            			</c:if>
-            			
-            			<c:if test="${userClickUpdateEquipment==true}">
-            				<%@ include file="update-customer-equipment.jsp" %>
-            			</c:if>
-            			
-            			<c:if test="${userClickIssueEquipment==true || userClickIssueEquipment==true}">
-            				<%@ include file="issue-equipment.jsp" %>
-            			</c:if>
-            			
-            			<c:if test="${userClickAcceptantEquipment==true}">
-            				<%@ include file="issue-equipment.jsp" %>
-            			</c:if>
+			<c:if test="${sessionScope.role=='CUSTOMER'}">
 
-            </c:if>
-           
+				<c:if test="${userClickNewEquipment==true}">
+					<%@ include file="new-customer-equipment.jsp"%>
+				</c:if>
+
+				<c:if test="${userClickUpdateEquipment==true}">
+					<%@ include file="update-customer-equipment.jsp"%>
+				</c:if>
+
+				<c:if
+					test="${userClickIssueEquipment==true || userClickIssueEquipment==true}">
+					<%@ include file="issue-equipment.jsp"%>
+				</c:if>
+
+				<c:if test="${userClickAcceptantEquipment==true}">
+					<%@ include file="acceptant.jsp"%>
+				</c:if>
+
+				<c:if test="${userClickAcceptantCriteria==true}">
+					<%@ include file="acceptant-criteria.jsp"%>
+				</c:if>
+
+				<c:if test="${userClickLaboratory==true}">
+					<%@ include file="laboratory.jsp"%>
+				</c:if>
+
+
+				<c:if test="${userClickLaboratoryList==true}">
+					<%@ include file="approved-laboratory.jsp"%>
+				</c:if>
+
+			</c:if>
+
 
 		</div>
 
@@ -139,22 +154,22 @@
 
 		<!-- Bootstrap Core JavaScript -->
 		<script src="${js}/bootstrap.min.js"></script>
-		
+
 		<!-- DataTable Plugin -->
 		<script src="${js}/jquery.dataTables.js"></script>
-		
+
 		<!-- DataTable Bootstrap Script -->
 		<script src="${js}/dataTables.bootstrap.js"></script>
-		
+
 		<!-- DataTable Bootstrap Script -->
 		<script src="${js}/bootbox.min.js"></script>
-		
+
 		<!-- Self coded javascript -->
 		<script src="${js}/myapp.js"></script>
-		
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-		
-		 
+
+		<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+		 -->
+
 	</div>
 
 </body>

@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Transient;
+import javax.validation.constraints.NotBlank;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,15 +24,28 @@ public class Equipment {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String equipmentId;
-	@Transient
+	@NotBlank
 	private String equipmen_sn;
+	@NotBlank
 	private String equipmentDescription;
+	@NotBlank
 	private String equipmentLeastCount;
+	@NotBlank
 	private String equipmentUnit;
+	@NotBlank
 	private String equipmentManfacturerName;
+	@NotBlank
 	private String equipmentCreatedBy;
+	@NotBlank
 	private String equipmentCreatedDate;
+	@NotBlank
 	private String equipmentCreatedTime;
+	@NotBlank
 	private String equipmentReasonForUpdate;
+	@NotBlank
+	private String equipmentCalibrationFrequency;
+	@NotBlank
+	private String equipmentType;
+	
 	
 }

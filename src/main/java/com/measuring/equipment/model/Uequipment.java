@@ -23,7 +23,6 @@ public class Uequipment {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long uID;
-	private String equipmentCalibrationFrequency;
 	private String equipmentCalibrationLaboratory;
 	private String equipmentCalibrationCertificateNo;
 	private String equipmentCalibrationCertificateName;
@@ -33,8 +32,8 @@ public class Uequipment {
 	private String equipmentAcceptanceCriteriaUnit;
 	private String equipmentDecisionOurRemark;
 	private String equipmentLocation;
+	private String equipmentCalibrationDate;
 	private String equipmentCalibrationExpiryDate;
-	private String equipmentType;
 	private String notesValues;
 	
 	@OneToOne

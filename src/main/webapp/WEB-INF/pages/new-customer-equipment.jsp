@@ -150,7 +150,7 @@
           <div class="form-group">
           <label for=equipmentCalibrationResults class="col-md-4 control-label"><span class="text-uppercase">Calibration Results:</span></label>
           <div class="col-md-8">
-           <sf:input path="equipmentCalibrationResults" id="equipmentCalibrationResults" class="form-control" placeholder="Enter the calibration certificate name"></sf:input>
+           <sf:input path="equipmentCalibrationResults" id="equipmentCalibrationResults" class="form-control" placeholder="Enter the calibration results"></sf:input>
            <sf:errors path="equipmentCalibrationResults" cssClass="help-block" element="em"/> 
           </div>
          </div>
@@ -190,7 +190,7 @@
          <div class="form-group">
           <label for=equipmentLocation class="col-md-4 control-label"><span class="text-uppercase">Equipment Location:</span></label>
           <div class="col-md-8">
-           <sf:input path="equipmentLocation" id="equipmentLocation" class="form-control" placeholder="Enter the decisionOur Remark"></sf:input>
+           <sf:input path="equipmentLocation" id="equipmentLocation" class="form-control" placeholder="Enter the location"></sf:input>
            <sf:errors path="equipmentLocation" cssClass="help-block" element="em"/> 
           </div>
          </div>
